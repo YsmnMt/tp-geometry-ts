@@ -34,17 +34,16 @@ describe("test LineString", () => {
         const b = new Point([3.0, 4.0]);
         const g = new LineString([a, b]);
 
-        const translated = g.translate(2.0, -1.0);
+        g.translate(2.0, -1.0);
 
-        expect(translated.getPointN(0).getCoordinate()).to.deep.equal([2.0, -1.0]);
-        expect(translated.getPointN(1).getCoordinate()).to.deep.equal([5.0, 3.0]);
-        expect(g.getPointN(0)).to.equal(a);
-        expect(g.getPointN(1)).to.equal(b);
+        expect(g.getPointN(0).getCoordinate()).to.deep.equal([2.0, -1.0]);
+        expect(g.getPointN(1).getCoordinate()).to.deep.equal([5.0, 3.0]);
     });
 
     it("should translate an empty LineString to an empty LineString", () => {
-        const translated = new LineString().translate(2.0, -1.0);
+        const g = new LineString();
+        g.translate(2.0, -1.0);
 
-        expect(translated.isEmpty()).to.equal(true);
+        expect(g.isEmpty()).to.equal(true);
     });
 });

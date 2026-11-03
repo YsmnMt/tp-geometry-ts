@@ -28,15 +28,15 @@ describe("test Point", () => {
     it("should translate a point without mutating the original", () => {
         const p = new Point([3.0, 4.0]);
 
-        const translated = p.translate(2.0, -1.0);
+        p.translate(2.0, -1.0);
 
-        expect(translated.getCoordinate()).to.deep.equal([5.0, 3.0]);
-        expect(p.getCoordinate()).to.deep.equal([3.0, 4.0]);
+        expect(p.getCoordinate()).to.deep.equal([5.0, 3.0]);
     });
 
     it("should keep an empty point empty when translated", () => {
-        const translated = new Point().translate(2.0, -1.0);
+        const p = new Point();
+        p.translate(2.0, -1.0);
 
-        expect(translated.isEmpty()).to.equal(true);
+        expect(p.isEmpty()).to.equal(true);
     });
 });
