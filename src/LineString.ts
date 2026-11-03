@@ -25,4 +25,8 @@ export default class LineString implements Geometry {
        return this.points.length === 0;
     }
 
+    translate(dx: number, dy: number): LineString {
+        return this.isEmpty() ? new LineString() : new LineString(this.points.map((point) => point.translate(dx, dy)));
+    }
+
  }

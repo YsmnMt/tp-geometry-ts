@@ -28,4 +28,8 @@ export default class Point implements Geometry {
     return this.isEmpty() ? Number.NaN : this.coordinate[1] ;
   }
 
+  translate(dx: number, dy: number): Point {
+      return this.isEmpty() ? new Point() : new Point([this.x() + dx, this.y() + dy]);
+    }
+
 }
