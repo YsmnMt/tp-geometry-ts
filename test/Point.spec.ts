@@ -9,8 +9,8 @@ describe("test Point", () => {
         expect(Number.isNaN(p.y())).to.be.true;
     });
     it("test constructor with coordinates", () => {
-        const p = new Point([3.0,4.0]);
-        expect(p.getCoordinate()).to.deep.equal([3.0,4.0]);
+        const p = new Point([3.0, 4.0]);
+        expect(p.getCoordinate()).to.deep.equal([3.0, 4.0]);
         expect(p.x()).to.equal(3.0);
         expect(p.y()).to.equal(4.0);
     });
@@ -39,4 +39,16 @@ describe("test Point", () => {
 
         expect(p.isEmpty()).to.equal(true);
     });
+
+
+    it("should clone the point given", () => {
+        const p = new Point([1.0, 3.0]);
+
+        const copy = p.clone();
+
+        copy.translate(9.0, 7.0);
+        expect(p.getCoordinate()).to.deep.equal([1.0, 3.0])
+        expect(copy.getCoordinate()).to.deep.equal([10.0, 10.0])
+    });
+
 });

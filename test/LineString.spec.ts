@@ -24,7 +24,7 @@ describe("test LineString", () => {
         const a = new Point([0.0, 0.0]);
         const b = new Point([3.0, 4.0]);
         const g = new LineString([a, b]);
-       
+
         expect(g.getPointN(0)).to.equal(a);
         expect(g.getPointN(1)).to.equal(b);
     });
@@ -46,4 +46,18 @@ describe("test LineString", () => {
 
         expect(g.isEmpty()).to.equal(true);
     });
+
+    it("should clone the linestring given", () => {
+        const a = new Point([0.0, 0.0]);
+        const b = new Point([3.0, 4.0]);
+        const g = new LineString([a, b]);
+
+        const copy = g.clone();
+
+        copy.translate(7.0, 8.0);
+
+        expect(copy.getPointN(0).getCoordinate()).to.deep.equal([7.0, 8.0]);
+        expect(copy.getPointN(1).getCoordinate()).to.deep.equal([10.0, 12.0]);
+    });
+
 });
