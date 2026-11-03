@@ -3,3 +3,4 @@
 /.nyc_output/
 /package-lock.json
 /coverage/
+/.DS_Store
