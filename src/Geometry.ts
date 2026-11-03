@@ -3,5 +3,5 @@ export default interface Geometry {
 
     isEmpty(): boolean;
 
-    translate(dx: number, dy:number): Geometry;
+    translate(dx: number, dy:number);
 }
