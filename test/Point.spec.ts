@@ -52,9 +52,9 @@ describe("test Point", () => {
     });
 
     it("should clone an empty point as an empty point", () => {
-            const copy = new Point().clone();
-    
-            expect(copy.isEmpty()).to.equal(true);
-        });
+        const copy = new Point().clone();
+
+        expect(copy.isEmpty()).to.equal(true);
+    });
 
 });
