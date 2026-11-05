@@ -51,4 +51,10 @@ describe("test Point", () => {
         expect(copy.getCoordinate()).to.deep.equal([10.0, 10.0])
     });
 
+    it("should clone an empty point as an empty point", () => {
+            const copy = new Point().clone();
+    
+            expect(copy.isEmpty()).to.equal(true);
+        });
+
 });
