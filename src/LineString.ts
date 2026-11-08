@@ -19,7 +19,7 @@ export default class LineString implements Geometry {
         return this.points.length;
     }
 
-    getPointN(n: number) {
+    getPointN(n: number) : Point {
         return this.points[n];
     }
 

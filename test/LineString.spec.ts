@@ -72,7 +72,7 @@ describe("test LineString", () => {
         const c = new Point([1.0, 3.0]);
         const g = new LineString([a, b, c]);
 
-        expect(g.getEnvelope().toString()).to.equal("[0, 0, 2, 3]");
+        expect(g.getEnvelope().toString()).to.equal("[0,0,2,3]");
     });
 
     it("should return an empty envelope for an empty LineString given", () => {

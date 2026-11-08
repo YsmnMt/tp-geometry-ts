@@ -57,7 +57,7 @@ describe("test Point", () => {
     it("should return the envelope of a point given", () => {
         const p = new Point([3.0, 4.0]);
 
-        expect(p.getEnvelope().toString()).to.equal("[3, 4, 3, 4]");
+        expect(p.getEnvelope().toString()).to.equal("[3,4,3,4]");
     });
 
     it("should return an empty envelope for an empty point given", () => {

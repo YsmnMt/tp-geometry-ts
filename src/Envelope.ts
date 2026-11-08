@@ -33,6 +33,6 @@ export default class Envelope {
         if (this.isEmpty()) {
             return "[]";
         }
-        return "[" + this.getXmin() + ", " + this.getYmin() + ", " + this.getXmax() + ", " + this.getYmax() + "]";
+        return "[" + this.getXmin() + "," + this.getYmin() + "," + this.getXmax() + "," + this.getYmax() + "]";
     }
 }
