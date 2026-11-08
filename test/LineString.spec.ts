@@ -33,7 +33,7 @@ describe("test LineString", () => {
         expect(g.getPointN(1)).to.equal(b);
     });
 
-    it("should translate all points without modifying the original", () => {
+    it("should translate all points", () => {
         const a = new Point([0.0, 0.0]);
         const b = new Point([3.0, 4.0]);
         const g = new LineString([a, b]);

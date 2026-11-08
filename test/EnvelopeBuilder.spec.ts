@@ -29,7 +29,7 @@ describe("test EnvelopeBuilder", () => {
         const b = new EnvelopeBuilder();
         b.insert([]);
         b.insert([1.0, 2.0]);
-        
+
         expect(b.build().toString()).to.equal("[1, 2, 1, 2]");
     });
 });

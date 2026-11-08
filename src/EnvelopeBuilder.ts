@@ -2,7 +2,6 @@ import Coordinate from "./Coordinate";
 import Envelope from "./Envelope";
 
 export default class EnvelopeBuilder {
-
     private xMin: number = Number.POSITIVE_INFINITY;
     private yMin: number = Number.POSITIVE_INFINITY;
     private xMax: number = Number.NEGATIVE_INFINITY;

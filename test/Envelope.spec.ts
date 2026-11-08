@@ -4,7 +4,7 @@ import Envelope from "../src/Envelope";
 describe("test Envelope", () => {
     it("test default constructor", () => {
         const e = new Envelope();
-        
+
         expect(e.isEmpty()).to.equal(true);
         expect(Number.isNaN(e.getXmin())).to.be.true;
         expect(Number.isNaN(e.getYmin())).to.be.true;
